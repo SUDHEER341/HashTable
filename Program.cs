@@ -16,6 +16,7 @@
 
             objOfHashTable.Delete("Sudheer");
             objOfHashTable.Print();
+            objOfHashTable.Search("Kumar");
 
         }
     }

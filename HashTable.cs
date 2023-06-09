@@ -73,6 +73,20 @@ namespace CustomHashTable
             }
 
         }
-
+            public void Search(T value)
+        {
+            int arrayIndex = Math.Abs(value.GetHashCode()) % Values.Length;
+            Node<T> temp = Values[arrayIndex];
+            while (!temp.Data.Equals(value))
+            {
+                if (temp.Next == null)
+                {
+                    Console.WriteLine($"{value} not found");
+                    return;
+                }
+                temp = temp.Next;
+            }
+            Console.WriteLine($"{value} is present at {arrayIndex} index in the hashtable"); ;
+        }
     }
 }
