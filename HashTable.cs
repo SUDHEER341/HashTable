@@ -34,6 +34,21 @@ namespace CustomHashTable
             newNode.Next = Values[arrayIndex];
             Values[arrayIndex] = newNode;
         }
-        
+
+        public void Print()
+        {
+            for (int index = 0; index < Values.Length; index++)
+            {
+                Node<T> temp = Values[index];
+                Console.Write("Index" + index + " :");
+                while (temp != null)
+                {
+                    Console.Write(temp.Data + "-->");
+                    temp = temp.Next;
+                }
+                Console.WriteLine();
+            }
+        }
+
     }
 }

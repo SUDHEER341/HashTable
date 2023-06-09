@@ -12,7 +12,7 @@
             objOfHashTable.Add("Kumar");
             objOfHashTable.Add("Nivetha");
 
-           
+            objOfHashTable.Print();
 
         }
     }
