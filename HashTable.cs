@@ -50,5 +50,29 @@ namespace CustomHashTable
             }
         }
 
+        public void Delete(T value)
+        {
+            int arrayIndex = Math.Abs(value.GetHashCode()) % Values.Length;
+            Node<T> temp = Values[arrayIndex];
+
+            if (Values[arrayIndex] != null)
+            {
+                if (Values[arrayIndex].Data.Equals(value))
+                {
+                    Values[arrayIndex] = Values[arrayIndex].Next;
+                }
+            }
+
+            if (temp != null)
+            {
+                if (temp.Data.Equals(value))
+                {
+
+                    Values[arrayIndex] = temp.Next;
+                }
+            }
+
+        }
+
     }
 }

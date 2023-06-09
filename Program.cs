@@ -14,6 +14,9 @@
 
             objOfHashTable.Print();
 
+            objOfHashTable.Delete("Sudheer");
+            objOfHashTable.Print();
+
         }
     }
 }
